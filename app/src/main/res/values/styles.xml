@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Einfaches App-Theme ohne Material -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Farben und Schriftarten kannst du hier einfügen -->
+        <item name="colorPrimary">#2196F3</item>
+        <item name="colorPrimaryDark">#1976D2</item>
+        <item name="colorAccent">#FFC107</item>
+    </style>
+
+    <style name="DarkDialog" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
+        <item name="android:background">#222222</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+    </style>
+    <style name="DialogNoCorners" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+</resources>

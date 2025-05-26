@@ -1,0 +1,984 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:backgroundTint="#282626"
+    android:background="@color/cardview_dark_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Hauptmenü -->
+    <LinearLayout
+        android:id="@+id/buttononhome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/inset_background">
+
+            <ImageView
+                android:id="@+id/appicon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="3dp"
+                android:layout_gravity="center"
+                android:background="@drawable/border_background"
+                android:src="@drawable/ic_launcher_round"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/URManager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="URManager"
+                android:textSize="40sp"
+                android:fontFamily="@font/font_1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:singleLine="true"
+                android:gravity="center"
+                android:ellipsize="none"
+                android:maxLines="1"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="40sp"
+                android:autoSizeStepGranularity="1sp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/settings_button"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/card_background"
+            android:src="@drawable/settings" />
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:id="@+id/lsposed_container"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:padding="16dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageButton
+                android:id="@+id/home_button_lsposed_repo"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_container"
+                android:src="@drawable/ic_home"
+                android:contentDescription="Home" />
+            <EditText
+                android:id="@+id/search_box_lsposed"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Suche App..."
+                android:inputType="text"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:padding="12dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/rounded_container"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/scrollView"
+            android:background="@drawable/inset_background"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- Deine anderen Widgets -->
+                <LinearLayout
+                    android:id="@+id/container"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+                    <!-- Weitere Inhalte hier -->
+                </LinearLayout>
+
+                <!-- ConstraintLayout für die ProgressBar -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Die ProgressBar in der Mitte von ConstraintLayout -->
+                    <ProgressBar
+                        android:id="@+id/loading_ls_modules"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:visibility="gone"
+                        app:lottie_rawRes="@raw/loading"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/home_container"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/inset_background"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/root_status_container"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/klickround"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/root_status_icon"
+                android:layout_width="66dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="11dp"
+                android:src="@drawable/remove" />
+
+            <TextView
+                android:id="@+id/root_status_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="19dp"
+                android:text="Root-Status: Unbekannt"
+                android:textColor="#DBC3C3"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/app_list_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#373232"
+            android:text="App-Liste"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/install_integrity_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#373232"
+            android:text="Integrity installieren"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/fix_whatsapp_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#373232"
+            android:text="Fix Whatsapp"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/clear_play_service_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#373232"
+            android:text="Play-Service bereinigen"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/installed_modules_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#373232"
+            android:text="Magisk"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/lsposed_repo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#373232"
+            android:text="lsposed Repo"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/setboothash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#373232"
+            android:text="Set vailed BootHash"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/test"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#373232"
+            android:text="Remove"
+            android:textColor="#FFFFFF" />
+
+
+
+        <Button
+            android:id="@+id/backup_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#373232"
+            android:text="App Backup"
+            android:textColor="#FFFFFF" />
+
+
+        <Button
+            android:id="@+id/tricky_store_addon_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#373232"
+            android:text="Tricky Store"
+            android:visibility="gone"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnHideMagisk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#373232"
+            android:text="Magisk Verstecken"
+            android:visibility="gone"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/backup_container"
+        android:padding="8dp">
+
+        <!-- Obere Leiste: Home, Suchfeld, Drei Punkte -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+
+            <ImageButton
+                android:id="@+id/home_button_backup"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/rounded_container"
+                android:src="@drawable/ic_home"
+                android:contentDescription="Home"
+                android:scaleType="centerInside" />
+
+            <EditText
+                android:id="@+id/search_box_backup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:hint="Suche App..."
+                android:inputType="text"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:padding="12dp"
+                android:background="@drawable/rounded_container"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/darker_gray" />
+
+            <ImageButton
+                android:id="@+id/three_dots_menu_backup"
+                android:layout_width="35dp"
+                android:layout_height="55dp"
+                android:background="@drawable/rounded_container"
+                android:src="@drawable/ic_more_vert"
+                android:contentDescription="More Options"
+                android:scaleType="centerInside" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/loading_spinner_backup"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:lottie_rawRes="@raw/loading"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+
+        <!-- ScrollView mit App-Liste -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/scrollViewBackup"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:id="@+id/app_list_layout_backup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="8dp" />
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="vertical">
+
+           <Button
+               android:layout_width="match_parent"
+               android:layout_height="50dp"
+               android:id="@+id/bakcup_selected_apps"
+               android:text="BACKUP"
+               android:textColor="@color/black"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/tricky_store_container"
+        android:padding="8dp">
+
+        <!-- Obere Leiste: Home, Suchfeld, Drei Punkte -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+
+            <ImageButton
+                android:id="@+id/home_button_tricky"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/rounded_container"
+                android:src="@drawable/ic_home"
+                android:contentDescription="Home"
+                android:scaleType="centerInside" />
+
+            <EditText
+                android:id="@+id/search_box_tricky"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:hint="Suche App..."
+                android:inputType="text"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:padding="12dp"
+                android:background="@drawable/rounded_container"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/darker_gray" />
+
+            <ImageButton
+                android:id="@+id/three_dots_menu_tricky"
+                android:layout_width="35dp"
+                android:layout_height="55dp"
+                android:background="@drawable/rounded_container"
+                android:src="@drawable/ic_more_vert"
+                android:contentDescription="More Options"
+                android:scaleType="centerInside" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/loading_spinner_tricky"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:lottie_rawRes="@raw/loading"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+
+        <!-- ScrollView mit App-Liste -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/scrollView2"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:id="@+id/app_list_layout_tricky"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="8dp" />
+
+
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/app_list_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@drawable/rounded_container2"
+        android:backgroundTint="#373232"> <!-- Night blue Hintergrund -->
+
+        <!-- Header mit Suchfeld und Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <!-- Home Button -->
+            <ImageButton
+                android:id="@+id/home_button_app_list"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/rounded_container"
+                android:src="@drawable/ic_home"
+                android:contentDescription="Home"
+                android:scaleType="centerInside" />
+
+            <!-- Suchfeld -->
+            <EditText
+                android:id="@+id/search_box"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Suche App..."
+                android:inputType="text"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:padding="12dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/rounded_container"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/darker_gray" />
+
+            <!-- Drei-Punkte Menü -->
+            <ImageButton
+                android:id="@+id/three_dots_menu"
+                android:layout_width="35dp"
+                android:layout_height="55dp"
+                android:background="@drawable/rounded_container"
+                android:src="@drawable/ic_more_vert"
+                android:contentDescription="More Options"
+                android:scaleType="centerInside" />
+        </LinearLayout>
+
+        <!-- Ladeanzeige -->
+        <ProgressBar
+            android:id="@+id/loading_spinner"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:lottie_rawRes="@raw/loading"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+
+        <!-- Scrollbarer Bereich für die App-Liste -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="12dp">
+
+            <LinearLayout
+                android:id="@+id/app_list_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+        </ScrollView>
+
+        <!-- Footer Buttons -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/rounded_container2">
+
+            <ImageButton
+                android:id="@+id/deleteButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="end|center_vertical"
+                android:background="@drawable/inset_background"
+                android:src="@drawable/delicon" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:visibility="gone"
+            android:gravity="center_horizontal">
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Einstellungen -->
+    <ScrollView
+        android:id="@+id/settings_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:padding="16dp"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:divider="?android:attr/dividerHorizontal"
+            android:showDividers="middle"
+            android:dividerPadding="8dp">
+
+            <!-- Überschrift -->
+            <TextView
+                android:id="@+id/boothash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Boot Hash:"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:paddingBottom="16dp"
+                android:paddingStart="8dp" />
+
+            <!-- Sprache Button -->
+            <Button
+                android:id="@+id/selectLangage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sprache ändern"
+                android:textSize="18sp"
+                android:background="@drawable/rounded_container"
+                android:textColor="#FFFFFF"
+                android:padding="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Sprachen Container -->
+            <LinearLayout
+                android:id="@+id/language_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/langague_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:padding="20dp"
+            android:layout_margin="20dp"
+            android:id="@+id/langague_container"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/module_container_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <!-- Fixierte Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginStart="8dp">
+
+                <ImageButton
+                    android:id="@+id/home_button_modules"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+
+                    android:background="@drawable/rounded_container"
+                    android:src="@drawable/ic_home"
+                    android:contentDescription="Home" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HOME"
+                    android:textSize="12sp"
+                    android:textColor="#FDFAFA"
+                    android:gravity="center"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginStart="8dp">
+
+                <ImageButton
+                    android:id="@+id/open_button_modules"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/rounded_container"
+                    android:src="@drawable/puzzle"
+                    android:contentDescription="Modules" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MODULES"
+                    android:textSize="12sp"
+                    android:textColor="#FDFAFA"
+                    android:gravity="center"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="visible"
+                android:layout_marginStart="8dp">
+
+                <ImageButton
+                    android:id="@+id/open_magisk_denylist"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/rounded_container"
+                    android:src="@drawable/notes_off"
+                    android:contentDescription="Modules" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DENYLIST"
+                    android:textSize="12sp"
+                    android:textColor="#FDFAFA"
+                    android:gravity="center"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_marginStart="8dp">
+
+                <ImageButton
+                    android:id="@+id/open_magisk_patch"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/rounded_container"
+                    android:src="@drawable/download"
+                    android:contentDescription="Modules" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Magisk Patch"
+                    android:textSize="12sp"
+                    android:textColor="#FDFAFA"
+                    android:gravity="center"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/magisk_patch"
+            android:visibility="gone">
+
+            <Spinner
+                android:id="@+id/imageSelector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/inset_background"
+                android:spinnerMode="dropdown"
+                android:dropDownVerticalOffset="8dp"
+                android:popupTheme="@color/white"
+                android:popupBackground="@drawable/inset_background" />
+
+            <Button
+                android:id="@+id/selectImage"
+                android:textColor="@color/white"
+                android:layout_margin="8dp"
+                android:background="@drawable/rounded_container2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Select Image"/>
+
+            <Button
+                android:id="@+id/startPatch"
+                android:textColor="@color/white"
+                android:background="@drawable/rounded_container2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:text="Start"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:layout_margin="8dp"
+                android:scrollbars="horizontal"
+                android:overScrollMode="always"
+                android:background="@drawable/rounded_container2">
+
+                <ScrollView
+                    android:id="@+id/outputScroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    android:overScrollMode="always">
+
+                    <TextView
+                        android:id="@+id/outputTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#00FF00"
+                        android:textSize="14sp"
+                        android:fontFamily="monospace"
+                        android:textIsSelectable="true"
+                        android:text="Ready…" />
+                </ScrollView>
+            </HorizontalScrollView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/denylist_layout_container">
+
+            <!-- Suchleiste immer sichtbar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/search_box_denylist"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="Search App..."
+                    android:inputType="text"
+                    android:drawableStart="@android:drawable/ic_menu_search"
+                    android:padding="12dp"
+                    android:background="@drawable/rounded_container"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/darker_gray" />
+
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content" />
+
+                <ImageButton
+                    android:id="@+id/three_dots_menu_denylist"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/rounded_container"
+                    android:src="@drawable/ic_more_vert"
+                    android:contentDescription="More Options"
+                    android:scaleType="centerInside" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/loading_spinner_denylist"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:lottie_rawRes="@raw/loading"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true" />
+            <!-- ScrollView enthält nur die App-Liste -->
+            <ScrollView
+                android:id="@+id/magisk_denylist_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/denylist_list_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp" />
+
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            android:visibility="visible"
+            android:id="@+id/module_containerr">
+            <!-- Button zum Installieren der Module -->
+            <Button
+                android:id="@+id/btn_select_modules"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Module Installieren"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/rounded_button"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- ProgressBar -->
+            <ProgressBar
+                android:id="@+id/loading_modules_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                app:lottie_rawRes="@raw/loading"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true" />
+
+            <!-- Scrollbarer Bereich für Module -->
+            <ScrollView
+                android:id="@+id/modules_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Module-Liste -->
+                    <LinearLayout
+                        android:id="@+id/module_list_container"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <!-- Module-Inhalte kommen hier hin -->
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- Statusanzeige -->
+    <TextView
+        android:id="@+id/status_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:visibility="gone"/>
+</LinearLayout>

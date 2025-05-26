@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_margin="5dp"
+    android:background="@drawable/dialog_background2"
+    android:layout_width="match_parent"
+    android:clipToOutline="true"
+    android:layout_height="500dp">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="19dp"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/border_background2"
+        android:contentDescription="Horizontal scrollbarer Bereich">
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Vertikal scrollbarer Bereich">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/dialogText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:text="Initialisiere..."
+                    android:textSize="17sp"
+                    android:padding="8dp"
+                    android:lineSpacingExtra="4dp" />
+
+            </LinearLayout>
+        </ScrollView>
+    </HorizontalScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Erste Zeile: Zwei Buttons nebeneinander -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/close_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:layout_margin="5dp"
+                android:padding="4dp"
+                android:background="@drawable/inset_background"
+                android:text="Close"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <Button
+                android:id="@+id/reboot_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:layout_margin="5dp"
+                android:padding="4dp"
+                android:background="@drawable/inset_background"
+                android:text="Reboot"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:maxLines="1" />
+        </LinearLayout>
+
+        <!-- Zweite Zeile: Ein Button über ganze Breite -->
+        <Button
+            android:id="@+id/clean_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/inset_background"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:padding="4dp"
+            android:text="Clear Play Service" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

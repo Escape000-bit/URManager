@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Dunkler Grund -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FF1C1C1C"/> <!-- Dunkles Grau -->
+            <corners android:radius="16dp"/>
+        </shape>
+    </item>
+
+    <!-- Leichter Schimmer oben links -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#33FFFFFF"
+                android:endColor="@android:color/transparent"
+                android:angle="135"/>
+            <corners android:radius="16dp"/>
+        </shape>
+    </item>
+</layer-list>
