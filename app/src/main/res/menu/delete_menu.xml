@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/clear_button"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_button"
+        android:title="Bereinigen"
+        android:textColor="#FFFFFF" />
+
+    <item
+        android:id="@+id/clear_important_button"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:title="Wichtige Apps bereinigen"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_button"
+        android:textColor="#FFFFFF" />
+
+    <item
+        android:id="@+id/dell_selected_apps"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:title="Löschen"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_button"
+        android:textColor="#FFFFFF" />
+
+    <item
+        android:id="@+id/make_selected_system_apps"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:title="Migrieren"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_button"
+        android:textColor="#FFFFFF" />
+</menu>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Dunkler Schatten unten rechts -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#373232" />
+            <corners android:radius="12dp"/>
+            <padding android:top="2dp" android:left="2dp"/>
+        </shape>
+    </item>
+
+    <!-- Heller Schatten oben links -->
+    <item android:left="2dp" android:top="2dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#4D4D4D"
+                android:endColor="#2B2B2B"
+                android:angle="135"/>
+            <corners android:radius="12dp"/>
+        </shape>
+    </item>
+</layer-list>

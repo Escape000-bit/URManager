@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:background="@drawable/dialog_background"
+    android:orientation="vertical"
+
+    android:padding="10dp">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:scrollbars="horizontal"
+        android:background="@drawable/border_background2"
+        android:fillViewport="true">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:fillViewport="true">
+
+            <TextView
+                android:id="@+id/dialogText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:text="Initialisiere..."
+                android:textSize="17sp"
+                android:padding="8dp"
+                android:lineSpacingExtra="4dp"
+                android:fontFamily="@font/font_2" />
+        </ScrollView>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Horizontale ProgressBar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:progressTint="@color/black"
+            android:progress="0"
+            android:visibility="visible"
+            android:max="100"
+            android:indeterminate="false"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Button-Reihe rechtsbündig -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_container"
+                android:text="Reboot"
+                android:textColor="#ffffff"
+                android:backgroundTint="#444444" />
+
+            <Button
+                android:id="@+id/continueButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fortfahren"
+                android:textColor="#ffffff"
+                android:backgroundTint="#00695C"
+                android:background="@drawable/rounded_container"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
