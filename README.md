@@ -9,6 +9,10 @@
 
 ---
 
+[![Telegram](https://img.shields.io/badge/Telegram-Join%20Chat-blue?style=flat&logo=telegram)](https://t.me/c/2665137590/1)
+
+---
+
 ## 🚀 Features
 
 ### 📱 App Manager
