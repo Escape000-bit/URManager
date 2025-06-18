@@ -14,19 +14,29 @@
 
 ## 🚀 Features
 
-### 📱 App Manager
+<details>
+  <summary>📱 App Manager</summary>
+
 - 📦 Uninstall apps  
 - 🧹 Clear app data  
 - 🚀 Convert apps to system apps
 
-### 🛡️ Install Integrity
+</details>
+
+<details>
+  <summary>🛡️ Install Integrity</summary>
+
 - 📦 Automatically download and install all required modules  
 - 🚫 Automatically add required apps and processes to the Magisk DenyList  
 - 🔐 Set the **Verified Boot Hash** if not already set  
 - 💾 Check if the `/data` partition is encrypted – if so, spoof the encryption status  
 - 📁 Copy **verified keybox** and **PIF files** (if available)
   
-### 🧩 Module Manager
+</details>
+
+<details>
+  <summary>🧩 Module Manager</summary>
+
 - 🗂️ View installed modules  
 - ✅ Enable/disable modules  
 - ⬆️ Update modules  
@@ -34,18 +44,38 @@
 - 🔄 Run actions with multi-selection support
 - Flash modules (multiple allowed)
 
-### 🚫 DenyList Manager (Magisk)
+</details>
+
+<details>
+  <summary>🚫 DenyList Manager (Magisk)</summary>
+
 - ➕ Add or remove apps/processes from Magisk DenyList  
 
-### 🧬 LSPosed Repository
+</details>
+
+<details>
+  <summary>🧬 LSPosed Repository</summary>
+
 - 🔍 Browse LSPosed modules  
-- 📥 Download and install mods  
+- 📥 Download and install mods
 
-### 🛡️ Verified Boot Hash
-- 📍 If your device lacks a verified boot hash, you can set it manually  
+</details>
 
-### 🛍️ Tricky Store
+<details>
+  <summary>🛡️ Verified Boot Hash</summary>
+
+- 📍 If your device lacks a verified boot hash, you can set it manually 
+
+</details>
+
+</details>
+
+<details>
+  <summary>🛍️ Tricky Store</summary>
+
 - 🎯 Add or remove apps from the spoofed target list  
+
+</details>
 
 ---
 
