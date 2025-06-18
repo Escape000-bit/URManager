@@ -20,21 +20,22 @@
 - 🧹 Clear app data  
 - 🚀 Convert apps to system apps
 
-### 🛡️ Install Integrity (Magisk)
+### 🛡️ Install Integrity
 - 📦 Automatically download and install all required modules  
 - 🚫 Automatically add required apps and processes to the Magisk DenyList  
 - 🔐 Set the **Verified Boot Hash** if not already set  
 - 💾 Check if the `/data` partition is encrypted – if so, spoof the encryption status  
 - 📁 Copy **verified keybox** and **PIF files** (if available)
   
-### 🧩 Magisk Module Manager
+### 🧩 Module Manager
 - 🗂️ View installed modules  
 - ✅ Enable/disable modules  
 - ⬆️ Update modules  
 - 🗑️ Delete modules  
-- 🔄 Run actions with multi-selection support  
+- 🔄 Run actions with multi-selection support
+- Flash modules (multiple allowed)
 
-### 🚫 DenyList Manager
+### 🚫 DenyList Manager (Magisk)
 - ➕ Add or remove apps/processes from Magisk DenyList  
 
 ### 🧬 LSPosed Repository
@@ -43,9 +44,6 @@
 
 ### 🛡️ Verified Boot Hash
 - 📍 If your device lacks a verified boot hash, you can set it manually  
-
-### 🛠️ WhatsApp Fix
-- 🩹 Fix "Unofficial Version Detected" warning  
 
 ### 🛍️ Tricky Store
 - 🎯 Add or remove apps from the spoofed target list  
@@ -67,8 +65,8 @@
 
 
 ## ⚙️ Requirements
-- 📱 Android 7.0+  
-- 🔓 Root access (Magisk recommended)  
+- 📱 Android 10.0+  
+- 🔓 Root access  
 - 🔧 Basic permissions for system operations
 
 ---
