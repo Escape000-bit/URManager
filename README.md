@@ -3,7 +3,6 @@
 
 ### ![Platform](https://img.shields.io/badge/platform-Android-green?style=flat-square)
 ### ![Root Required](https://img.shields.io/badge/root-required-red?style=flat-square)
-### ![License](https://img.shields.io/github/license/Escape000-bit/urmanager?style=flat-square)
 ### ![GitHub Repo stars](https://img.shields.io/github/stars/Escape000-bit/urmanager?style=flat-square)
 ### ![GitHub all releases](https://img.shields.io/github/downloads/Escape000-bit/urmanager/total?style=flat-square)
 
