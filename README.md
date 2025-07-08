@@ -2,15 +2,19 @@
 ### A powerful Root Manager for Android – packed with advanced tools for power users.
 
 <p align="center">
-  <img src="https://img.shields.io/github/downloads/Escape000-bit/urmanager/total?style=flat-square" width="150">
-  <img src="https://img.shields.io/badge/platform-Android-green?style=flat-square" width="150">
-  <img src="https://img.shields.io/badge/root-required-red?style=flat-square" width="150">
-  <img src="https://img.shields.io/github/stars/Escape000-bit/urmanager?style=flat-square" width="150">
+  <img src="https://img.shields.io/github/downloads/Escape000-bit/urmanager/total?style=flat-square"><br>
+  <img src="https://img.shields.io/badge/platform-Android-green?style=flat-square"><br>
+  <img src="https://img.shields.io/badge/root-required-red?style=flat-square"><br>
+  <img src="https://img.shields.io/github/stars/Escape000-bit/urmanager?style=flat-square">
 </p>
 
 ---
 
-### [![Telegram](https://img.shields.io/badge/Telegram-Join%20Chat-blue?style=flat&logo=telegram)](https://t.me/c/2665137590/1)
+<p align="center">
+  <a href="https://t.me/c/2665137590/1">
+    <img src="https://img.shields.io/badge/Telegram-Join%20Chat-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white">
+  </a>
+</p>
 
 ---
 
