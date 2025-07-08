@@ -5,7 +5,9 @@
 ### ![Root Required](https://img.shields.io/badge/root-required-red?style=flat-square)
 ### ![GitHub Repo stars](https://img.shields.io/github/stars/Escape000-bit/urmanager?style=flat-square)
 <p align="center">
-  <img src="https://img.shields.io/github/downloads/Escape000-bit/urmanager/total?style=flat-square" width="200">
+  <a href="https://github.com/Escape000-bit/urmanager">
+    <img src="https://img.shields.io/github/downloads/Escape000-bit/urmanager/total?style=flat-square" width="250"/>
+  </a>
 </p>
 
 ---
